@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="./css/jacky.css">
+    <script src="https://kit.fontawesome.com/fa930cfc62.js" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+    <!-- Start of Header Section-->
+    <div id="header">
+        <div class="header-container">
+            <nav>
+                <!-- Logo -->
+                <img src="KEMI/IMAGES/IMG_20240119_093628_684.jpg" class="logo">
+                <!-- Navigation Menu-->
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#project">PROJECTS</a></li>
+                    <li><a href="#contact-info">CONTACT INFORMATION</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <!-- Header Text Section -->
+            <div class="header-title scroll-scale">
+                <h2>BED<br> SCIENCE <br> Student</h2>
+                <h1>Hello there, I'm<br><span>JACKLINE</span> MATUNDURA</h1>
+                <p>I am a student at Egerton University.</p>
+    <!-- End of Header Section-->
+
+    <!-- Start of About Me Section-->
+    <div id="about">
+        <!-- Start of About Me container block-->
+        <div class="about-container">
+            <h1 class="about-title">ABOUT ME</h1>
+            <!-- Start of About Me Row Content(Image and Text)-->
+            <div class="about-row">
+                <!-- Start of About Me Image Column-->
+                <div class="about-image scroll-scale">
+                    <img src="KEMI/IMAGES/IMG_20240112_161554_957.jpg">
+                </div>
+                <!-- End of About Me Image Column-->
+                <!-- Start of About Me Text Column-->
+                <div class="about-text scroll-scale">
+                    <h1 class="title">So, Who am I?</h1>
+                    <p>I am a passionate, hardworking and dedicated person. Being a student of Biology and Chemistry, I enjoy learning new things and I love taking care of my environment. I've always wanted to be a teacher and as I'm being mouldded and shaped into one, I take evry step seriously and make the most out of it. By the end of the four years of my studies, I hope to be a great teacher, who is able to deliver the best and bring out the best in my students.</p>
+                    <!-- Education and Experience tab titles-->
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('education')">Education </p>
+                    </div>
+                    <!-- Start of Education tab-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Sep, 2021 - Present</span><br>Egerton University</li>
+                            <li><span>2017 - 2020</span><br>Odande Girls High School</li>
+                            <li><span>Jan,2008 - November,2016</span><br>St. Joseph's Nyabururu Primary School</li>
+                        </ul>
+                    </div>
+                    <!-- End of Education tab-->
+                </div>
+                <!-- End of About Me Text Column-->
+            </div>
+            <!-- End of About Me Row Content(Image and Text) -->
+        </div>
+        <!-- End of About Me container block-->
+    </div>
+    <!-- End of About Me Section-->
+
+    <!--Start of Projects Section -->
+    <div id="project">
+        <div class="project-container">
+            <h1 class="project-title scroll-scale">PROJECTS</h1>
+            <h1 class="title scroll-scale">Some of My Work</h1>
+            <!-- Start of Projects Contents-->
+            <div class="work-list scroll-scale">
+                <!-- Project 1 -->
+                <div class="work">
+                    <img src="KEMI/IMAGES/IMG_20231113_101104_869.jpg">
+                    <div class="layer">
+                        <h3>Tree Planting</h3>
+                        <p>Am an active environmetalist, championing towards conservation of environment. As one of my projects, i engaged in national tree planting day around my University </p>
+                    </div>    
+                </div>
+                <!-- Project 2 -->
+                <div class="work">
+                    <img src="KEMI/IMAGES/image3.jpg">
+                    <div class="layer">
+                        <h3>Arts</h3>
+                        <p>As a hobby, i engage myself in charts drawings</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            <!-- End of Projects Contents-->
+    <!-- Start of Contant Information -->
+    <div id="contact-info">
+        <div class="contact-container">
+            <h1 class="contact-title">CONTACT INFORMATION</h1>
+                <!-- Contact Me -->                
+                <div class="contact-me scroll-scale">
+                    <h1 class="title">Contact Me</h1>
+                    <p>This is how you can get in touch with me<br><span>Just a ping away!</span></p>
+                    <p><i class="fa-solid fa-envelope"></i> Email: jacklinematundura2003@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>Phone: +254742664357</p>
+                    <!-- Social Media Links -->
+    <script>
+        // Get all elements with the class "tab-links" and store them in the "tablinks" array-like object.
+        let tablinks = document.getElementsByClassName("tab-links");
+        // Get all elements with the class "tab-contents" and store them in the "tabcontents" array-like object.
+        let tabcontents = document.getElementsByClassName("tab-contents");
+
+        // Opentab function which takes a parameter "tabname", used for switching between content section based on the tab clicked.
+        function opentab(tabname) {
+            // Loop through all elements with the class "tab-links".
+            for (tablink of tablinks){
+                // Remove the "active-link" class from each "tab-link" element.
+                tablink.classList.remove("active-link");
+            }
+
+            // Loop through all elements with the class "tab-contents".
+            for (tabcontent of tabcontents){
+                 // Remove the "active-tab" class from each "tab-content" element.
+                tabcontent.classList.remove("active-tab");
+            }
+
+            // Add the "active-link" class to the clicked "tab-link" element.
+            event.currentTarget.classList.add("active-link")
+            // Add the "active-tab" class to the element with the specified "tabname" ID.
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        let sidemenu = document.getElementById("sidemenu");
+
+        // Function to open the side menu.
+        function openmenu() {
+            sidemenu.style.right = "0"; // Set the right CSS property of the "sidemenu" element to "0," making it visible.
+        }
+
+         // Function to close the side menu.
+        function closemenu() {
+            sidemenu.style.right = "-200px"; // Set the right CSS property of the "sidemenu" element to "-200px," hiding it.
+        }
+    </script>
+
+    <script>
+        // Create an IntersectionObserver object, which is used to check if an element is in the viewport.
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                // Check if the element is currently intersecting with the viewport.
+                if(entry.isIntersecting) {
+                    // If it's intersecting, add the "show-items" class to the element, which makes it visible.
+                    entry.target.classList.add("show-items");
+                }
+                else {
+                    // If it's not intersecting, remove the "show-items" class to hide it.
+                    entry.target.classList.remove("show-items");
+                }
+            });
+        });
+
+        // Select all elements with the class "scroll-scale" and observe them using the IntersectionObserver.
+        const scrollScale = document.querySelectorAll(".scroll-scale");
+        scrollScale.forEach((el) => observer.observe(el));
+
+        // Select all elements with the class "scroll-bottom" and observe them using the IntersectionObserver.
+        const scrollBottom = document.querySelectorAll(".scroll-bottom");
+        scrollBottom.forEach((el) => observer.observe(el));
+
+        // Select all elements with the class "scroll-top" and observe them using the IntersectionObserver.
+        const scrollTop = document.querySelectorAll(".scroll-top");
+        scrollTop.forEach((el) => observer.observe(el));
+    </script>
+    
+    <script>
+        function resetForm() {
+            // Get the form element by its ID
+            const form = document.getElementById("contact-form");
+
+            // Reset the form to clear input fields
+            form.reset();
+
+           // Prevent the form from being submitted to the server
+            return false;
+        }
+    </script>
+</body>
+</html>
